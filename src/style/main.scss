@@ -1,0 +1,23 @@
+@import "_variable";
+@import "_mixins";
+
+* {
+  margin: 0 auto;
+  font-family: $font-main;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pageTitle {
+  font-size: 60px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 80px;
+
+  @include for-tablet {
+    font-size: 40px;
+  }
+}

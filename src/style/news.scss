@@ -1,0 +1,47 @@
+@import "_variable";
+@import "_mixins";
+@import "_animation";
+
+.news {
+  display: flex;
+
+  min-height: 50vh;
+  flex-direction: column;
+  padding: 50px 0px;
+
+  background: $pattern;
+  background-size: 2em 2em;
+  background-color: #232323;
+  &__item {
+    max-width: 80%;
+    background: #fff;
+    justify-content: space-around;
+    padding: 60px 30px;
+
+    &--title {
+      display: block;
+      margin: 10px auto;
+      border-bottom: 1px solid black;
+      width: 100%;
+      font-size: 40px;
+      font-family: $font-second;
+      font-style: italic;
+      font-weight: bold;
+
+      @include for-phone-only {
+        font-size: 30px;
+      }
+    }
+
+    &--content {
+      padding: 10px 0;
+      font-family: $font-second;
+    }
+
+    &--data {
+      font-weight: bold;
+      color: grey;
+      font-style: italic;
+    }
+  }
+}

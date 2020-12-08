@@ -1,0 +1,1 @@
+@font-face{font-family:Montserrat;src:url(../fonts/Montserrat-Regular.ttf)}@font-face{font-family:OpenSans;src:url(../fonts/OpenSans-Regular.ttf)}*{margin:0 auto;font-family:Montserrat}html{scroll-behavior:smooth}.pageTitle{font-size:60px;display:block;width:100%;text-align:center;padding-top:80px}@media (max-width:800px){.pageTitle{font-size:40px}}

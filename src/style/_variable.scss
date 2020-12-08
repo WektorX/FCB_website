@@ -1,0 +1,33 @@
+// breakpoints
+
+$break-mobile: 600px;
+$break-tablet: 800px;
+$break-smallDesktop: 1024px;
+$break-largeDesktorp: 1025px;
+
+// colors
+$main-orange: #d96704;
+$light-grey: #f2f2f3;
+$black: #000000;
+$messy-blue: #00748c;
+$orange-yellow: #e6a407;
+$light-blue: #04b3d9;
+
+// fonts
+$font-main: Montserrat;
+$font-second: OpenSans;
+
+//pattern
+$pattern: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}

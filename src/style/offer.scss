@@ -1,0 +1,94 @@
+@import "_variable";
+@import "_mixins";
+@import "_animation";
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  min-height: 130vh;
+  padding: 20px 0px 50px 0px;
+
+  &__title {
+    margin-top: 50px;
+    display: block;
+    font-size: 50px;
+    text-align: center;
+
+    @include for-small-desktop {
+      padding-top: 60px;
+    }
+
+    @include for-tablet {
+      font-size: 30px;
+      padding-top: 20px;
+    }
+
+    &::first-letter {
+      color: $main-orange;
+      font-size: 1.5em;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 90vw;
+    opacity: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    &--element {
+      display: block;
+      position: relative;
+      width: 30%;
+      min-height: 25vw;
+      opacity: 1;
+
+      @include for-small-desktop {
+        width: 45%;
+      }
+
+      @include for-tablet {
+        width: 100%;
+      }
+    }
+    &--animate {
+      animation: appear 2.5s;
+      // animation-delay: 2s;
+      opacity: 1;
+    }
+
+    &--icon {
+      width: 60px;
+      height: 60px;
+      // background: black;
+      margin: 20px auto;
+      background-size: contain;
+    }
+
+    &--title {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &--text {
+      padding: 30px;
+      text-align: center;
+
+      @include for-phone-only {
+        padding: 10px;
+      }
+    }
+
+    &--more {
+      display: block;
+      text-decoration: none;
+      color: $main-orange;
+      text-align: right;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

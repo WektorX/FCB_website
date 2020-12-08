@@ -1,0 +1,71 @@
+@import "_variable";
+@import "_mixins";
+@import "_animation";
+
+.about {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  background-image: url("../images/about.jpg");
+
+  min-height: 70vh;
+  padding: 100px 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+
+    @include for-small-desktop {
+      padding-top: 60px;
+    }
+
+    @include for-tablet {
+      font-size: 30px;
+      padding-top: 20px;
+    }
+
+    &::first-letter {
+      font-size: 1.5em;
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    padding: 50px;
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    text-align: center;
+    background: rgba($color: #fff, $alpha: 0.9);
+    color: black;
+
+    &--list {
+      display: block;
+      text-align: center;
+      max-width: 70%;
+
+      & li {
+        margin: 15px auto;
+      }
+
+      @include for-tablet {
+        max-width: 90%;
+      }
+    }
+
+    &--animate {
+      animation: appear 2s;
+      opacity: 1;
+    }
+
+    @include for-tablet {
+      width: 90%;
+      padding: 50px 0px;
+    }
+  }
+}

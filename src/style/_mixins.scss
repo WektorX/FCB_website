@@ -1,0 +1,22 @@
+@import "_variable";
+
+@mixin for-phone-only {
+  @media (max-width: $break-mobile) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (max-width: $break-tablet) {
+    @content;
+  }
+}
+@mixin for-small-desktop {
+  @media (max-width: $break-smallDesktop) {
+    @content;
+  }
+}
+@mixin for-large-desktop {
+  @media (min-width: $break-largeDesktorp) {
+    @content;
+  }
+}

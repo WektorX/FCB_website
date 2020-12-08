@@ -1,0 +1,131 @@
+@import "_variable";
+@import "_mixins";
+@import "_animation";
+//navigation bar class
+.navBar {
+  position: fixed;
+  width: 100vw;
+  z-index: 3;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+
+  @include for-small-desktop {
+    flex-wrap: wrap;
+  }
+  @include for-phone-only {
+    flex-direction: row;
+  }
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
+
+  @include for-small-desktop {
+    width: 100vw;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+
+  //class of element of navigation
+  &__element {
+    display: flex;
+
+    @include for-tablet {
+      opacity: 0;
+    }
+
+    &--link {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 15px 10px;
+      color: black;
+      font-size: 12px;
+      @include for-tablet {
+        padding: 20px 10px;
+        width: 80vw;
+      }
+      @include for-phone-only {
+        width: 80vw;
+        padding: 20px 10px;
+        border-bottom: 3px solid white;
+      }
+    }
+    //underline current location on menu bar
+    &--current {
+      border-bottom: 3px solid black;
+    }
+
+    &--showUp {
+      animation: showUp;
+      animation-duration: 1.5s;
+      opacity: 1;
+    }
+  }
+  //show menu when on tablet or smartphone
+
+  @include for-tablet {
+    display: none;
+  }
+
+  &__show {
+    display: flex;
+    animation: slideDownMenu 1.5s;
+  }
+}
+
+.logo {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+  @include for-small-desktop {
+    margin-bottom: 30px;
+  }
+  @include for-tablet {
+    display: block;
+    height: 50px;
+    margin-bottom: 0px;
+  }
+
+  @include for-phone-only {
+    display: block;
+    height: 30px;
+    font-size: 30px;
+    min-width: 70vw;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+}
+//hamburger icon class -> on click open menu
+.hamburger {
+  display: none;
+  @include for-tablet {
+    display: block;
+    background-image: url("../images/hamburger.png");
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+  }
+
+  @include for-phone-only {
+    width: 20px;
+    height: 20px;
+  }
+}
