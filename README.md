@@ -1,7 +1,5 @@
 # FCB_website
-Website for a restructuring office
-
-### Website made with the gulp.js tool.
+Website for a restructuring office,made with the gulp.js tool.
 
 ### Technologies used in the project:
 -JavaScript
@@ -10,5 +8,5 @@ Website for a restructuring office
 -PHP
 -MySQL
 
-## Link to the website: 
+### Link to the website: 
 https://restrukturyzacja.biz.pl
