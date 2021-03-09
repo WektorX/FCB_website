@@ -20,7 +20,53 @@ function showNavigation() {
   showMenu = !showMenu;
 }
 
+function showSubpages() {
+  var data = { action: "getSubpages" };
+  getContent(data, addToMenu);
+}
+
+function addToMenu(data) {
+  let menu = document.getElementsByClassName("navigation")[0];
+
+  for (let i = 0; i < data.length; i++) {
+    let li = document.createElement("li");
+    li.classList.add("navigation__element");
+    if (data[i].enable == 1) {
+      let a = document.createElement("a");
+      a.classList.add("navigation__element--link");
+      console.log(window.location.pathname);
+      let path = window.location.pathname == "/" ? "./" : "../";
+      a.href = path + data[i].path;
+      a.textContent = data[i].name;
+      if (window.location.pathname == "/" + data[i].path) {
+        a.classList.add("navigation__element--current");
+      }
+      let newLi = li;
+      newLi.appendChild(a);
+      menu.appendChild(newLi);
+    }
+  }
+  addToFooter(data);
+}
+
+function addToFooter(data) {
+  let links = document.getElementsByClassName("footer__links")[0];
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].enable == 1) {
+      let a = document.createElement("a");
+      let path = window.location.pathname == "/" ? "./" : "../";
+      a.href = path + data[i].path;
+      a.textContent = data[i].name;
+      links.appendChild(a);
+    }
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
+  // make menu
+  showSubpages();
+
   //menu hamburger button eventlistener
   var hamburger = document.getElementsByClassName("hamburger")[0];
   hamburger.addEventListener("click", () => showNavigation());

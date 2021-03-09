@@ -1,0 +1,24 @@
+@import "_variable";
+@import "_mixins";
+@import "_animation";
+
+.policy {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  padding: 50px 0px;
+  background-color: #232323;
+
+  &__text {
+    width: 80%;
+    background: #fff;
+    padding: 30px;
+
+    @include for-phone-only {
+      font-size: 0.8em;
+    }
+    & li {
+      padding-top: 10px;
+    }
+  }
+}

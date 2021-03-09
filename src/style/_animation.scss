@@ -10,13 +10,18 @@
   }
 }
 
-@keyframes slideDownMenu {
+@keyframes slideFromRight {
   from {
-    max-height: 0px;
+    right: -100vw;
+    display: none;
+    opacity: 0;
   }
 
   to {
-    max-height: 100vh;
+    right: 0;
+    display: block;
+    opacity: 1;
+    right: 0;
   }
 }
 
@@ -42,5 +47,155 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    margin-left: -80%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundOpacity {
+  from {
+    background: rgba($color: #000, $alpha: 0);
+  }
+  to {
+    background: rgba($color: #000, $alpha: 0.5);
+  }
+}
+
+@keyframes growItem {
+  from {
+    width: 45%;
+    height: 80px;
+  }
+  40% {
+    width: 80%;
+    height: 80px;
+  }
+  to {
+    width: 80%;
+    height: 500px;
+  }
+}
+
+@keyframes decreaseItem {
+  from {
+    width: 80%;
+    height: 500px;
+  }
+  40% {
+    width: 80%;
+    height: 80px;
+  }
+  to {
+    width: 45%;
+    height: 80px;
+  }
+}
+
+@keyframes rollDown {
+  from {
+    height: 80px;
+  }
+  to {
+    height: 800px;
+  }
+}
+
+@keyframes rollUp {
+  from {
+    height: 800px;
+  }
+  to {
+    height: 80px;
+  }
+}
+
+@keyframes slideLeftContact {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 50vw;
+  }
+}
+
+@keyframes slideLeftContactTablet {
+  from {
+    left: 95%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideRightContact {
+  from {
+    right: 50vw;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideRightContactTablet {
+  from {
+    right: 95%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideLeftContactForm {
+  from {
+    right: -50vw;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideLeftContactFormTablet {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideRightContactForm {
+  from {
+    right: 0;
+  }
+  to {
+    right: -50vw;
+  }
+}
+
+@keyframes slideRightContactFormTablet {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100vw;
   }
 }

@@ -4,37 +4,62 @@
 
 .news {
   display: flex;
-
-  min-height: 50vh;
+  min-height: 60vh;
   flex-direction: column;
   padding: 50px 0px;
-
   background: $pattern;
   background-size: 2em 2em;
   background-color: #232323;
+
+  &__empty {
+    width: 70vw;
+    // min-height: 30vh;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10% 0;
+    &--alert {
+      margin: 0 auto;
+    }
+
+    & a {
+      color: $secondary-color;
+      text-decoration: none;
+    }
+    @include for-phone-only {
+      font-size: 12px;
+    }
+  }
+
   &__item {
-    max-width: 80%;
+    width: 80%;
     background: #fff;
     justify-content: space-around;
-    padding: 60px 30px;
-
-    &--title {
+    padding: 30px 30px;
+    margin: 30px auto;
+    &--hrefTitle {
+      text-decoration: none;
+      color: black;
       display: block;
       margin: 10px auto;
       border-bottom: 1px solid black;
       width: 100%;
-      font-size: 40px;
+      font-size: 30px;
       font-family: $font-second;
-      font-style: italic;
+      // font-style: italic;
       font-weight: bold;
 
       @include for-phone-only {
-        font-size: 30px;
+        font-size: 25px;
+      }
+      &:hover {
+        cursor: default;
       }
     }
 
     &--content {
       padding: 10px 0;
+      word-break: break-word;
       font-family: $font-second;
     }
 

@@ -6,16 +6,21 @@ $break-smallDesktop: 1024px;
 $break-largeDesktorp: 1025px;
 
 // colors
-$main-orange: #d96704;
+// $main-color: #d96704;
+$main-color: #3b4d70;
+
 $light-grey: #f2f2f3;
+
 $black: #000000;
-$messy-blue: #00748c;
-$orange-yellow: #e6a407;
-$light-blue: #04b3d9;
+
+// $secondary-color: #e6a407;
+// $secondary-color: #e9b069;
+$secondary-color: #3b4da3;
+$dark-background: rgb(30, 32, 36);
 
 // fonts
 $font-main: Montserrat;
-$font-second: OpenSans;
+$font-second: "Lato", sans-serif;
 
 //pattern
 $pattern: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
@@ -25,9 +30,4 @@ $pattern: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
 @font-face {
   font-family: Montserrat;
   src: url("../fonts/Montserrat-Regular.ttf");
-}
-
-@font-face {
-  font-family: OpenSans;
-  src: url("../fonts/OpenSans-Regular.ttf");
 }
